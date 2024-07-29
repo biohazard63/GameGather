@@ -5,25 +5,16 @@ export const siteConfig = {
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
-      label: "Home",
-      href: "/",
+      label: "admin",
+      href: "/admin",
+      roles: ["admin"]
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "user",
+      href: "/user",
+      roles: ["user"],
     },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
+
   ],
   navMenuItems: [
     {
@@ -60,10 +51,19 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/biohazard63",
+    discord: "https://discord.gg/svwDTdTm",
   },
 };
+
+
+// Function to get user role (this is just a placeholder, replace with actual implementation)
+export function getUserRole(): string {
+  // Replace with actual logic to get the user's role
+  return "user"; // or "admin"
+}
+
+// Function to filter nav items based on user role
+export function getFilteredNavItems(role: string) {
+  return siteConfig.navItems.filter(item => item.roles.includes(role));
+}

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
@@ -23,17 +24,7 @@ export default function Home() {
       </div>
 
       <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
+
         <Link
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
